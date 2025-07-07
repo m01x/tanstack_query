@@ -8,9 +8,28 @@ interface GetProductsOptions {
     filterKey?: string;
 }
 
-export const getProduct = async( {  filterKey }:GetProductsOptions ) => {
+const sleep = ( seconds: number = 0 ):Promise<boolean> => {
+
+    return new Promise( resolve => {
+        setTimeout( () => {
+            resolve(true);
+        }, seconds * 1000);
+    });
+
+}
+
+export const getProduct = async( {  filterKey }:GetProductsOptions ):Promise<Product[]> => {
   
-    const { data } = await productsApi.get<Product[]>('/products');
+    const filterUrl = filterKey ? `category=${filterKey}` : '';
+    await sleep(3);
+    const { data } = await productsApi.get<Product[]>(`/products?${filterUrl}`);
+
+    return data;
+}
+
+export const getProductById = async( id:number ):Promise<Product> => {
+  
+    const { data } = await productsApi.get<Product>(`/products/${id}`);
 
     return data;
 }
