@@ -239,6 +239,14 @@
         "rate": 3.6,
         "count": 145
       }
+    },
+    {
+      "title": "teclados",
+      "price": 15000,
+      "description": "lorem50",
+      "category": "electronics",
+      "image": "https://cdnx.jumpseller.com/easytech-store/image/24090183/017004-1.jpg",
+      "id": 21
     }
   ]
 }

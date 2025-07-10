@@ -1,6 +1,8 @@
 import { Button, Image, Input, Textarea } from "@nextui-org/react";
+import { useMutation } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { productActions, useProductMutation } from "..";
 
 interface FormInputs {
 
@@ -13,6 +15,8 @@ interface FormInputs {
 }
 
 export const NewProduct = () => {
+
+  const productMutation = useProductMutation();
 
   const [tempImage, setTempImage] = useState("");
 
@@ -38,7 +42,9 @@ export const NewProduct = () => {
 
   //2) Asi lo hacen los de FormData...
   const onSubmit:SubmitHandler<FormInputs> = (data) => {
-    console.log(data)
+    
+    productMutation.mutate(data); //esto ya realiza el posteo de la data
+
   }
   
 
@@ -113,7 +119,14 @@ export const NewProduct = () => {
            
 
             <br />
-            <Button type="submit" className="mt-2" color="primary">Crear</Button>
+            <Button 
+              type="submit" 
+              className="mt-2" 
+              color="primary"
+              isDisabled={ productMutation.isPending }
+            >
+              { productMutation.isPending ? 'Cargando...':'Crear producto'}
+            </Button>
           </div>
 
           <div className="bg-white rounded-2xl p-10 flex items-center" style={{
