@@ -247,6 +247,46 @@
       "category": "electronics",
       "image": "https://cdnx.jumpseller.com/easytech-store/image/24090183/017004-1.jpg",
       "id": 21
+    },
+    {
+      "title": "Vestido",
+      "price": 15000,
+      "description": "Vestido negro largo",
+      "category": "women's clothing",
+      "image": "https://amoramar.cl/cdn/shop/files/FullSizeRender_0c6a8656-7dc4-4dd3-b03e-cf1ae7e83dd6.jpg",
+      "id": 22
+    },
+    {
+      "title": "tacos charol",
+      "price": 15000,
+      "description": "lorem50",
+      "category": "men's clothing",
+      "image": "https://dojiw2m9tvv09.cloudfront.net/24798/product/X_sandalia-charol-negro-mujer-taco-alto-y-plataforma-12981.jpg",
+      "id": 23
+    },
+    {
+      "title": "zapatitos piera",
+      "price": 15000,
+      "description": "lorem50",
+      "category": "women's clothing",
+      "image": "https://cdnx.jumpseller.com/burano-cuero-diseno/image/51691390/Flavia-Negro-Print5.png?1723820476",
+      "id": 24
+    },
+    {
+      "title": "otro zapato",
+      "price": 15000,
+      "description": "asdasdlorem50",
+      "category": "women's clothing",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMPAHmATZ4bgrg7zI0YbLf596cHbyL4PGzPA&s",
+      "id": 25
+    },
+    {
+      "title": "teclado",
+      "price": 15000,
+      "description": "lorem50",
+      "category": "electronics",
+      "image": "https://cdnx.jumpseller.com/easytech-store/image/24090183/017004-1.jpg",
+      "id": 26
     }
   ]
 }

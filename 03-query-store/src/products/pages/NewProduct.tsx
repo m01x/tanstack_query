@@ -1,8 +1,7 @@
 import { Button, Image, Input, Textarea } from "@nextui-org/react";
-import { useMutation } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { productActions, useProductMutation } from "..";
+import { useProductMutation } from "..";
 
 interface FormInputs {
 
